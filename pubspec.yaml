@@ -40,7 +40,11 @@ dependencies:
   firebase_core: ^2.6.1
   firebase_auth: ^4.2.8
   cloud_firestore: ^4.4.2
-  flutter_camera: ^0.1.1
+  image_picker: ^0.8.6+3
+  video_player: ^2.5.2
+  path_provider: ^2.0.13
+  geolocator: ^9.0.2
+  geocoding: ^2.1.0
 
 dev_dependencies:
   flutter_test:

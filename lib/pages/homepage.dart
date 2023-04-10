@@ -3,6 +3,25 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
+  Container search() {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        shape: BoxShape.rectangle,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 8),
+        child: TextFormField(
+          decoration: InputDecoration(
+              icon: Icon(Icons.search),
+              hintText: "Search",
+              border: InputBorder.none),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,29 +39,10 @@ class HomePage extends StatelessWidget {
         itemCount: 1,
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pushNamed(context, "camera");
+        onPressed: () async {
+          Navigator.pushNamed(context, "video");
         },
         child: Icon(Icons.add),
-      ),
-    );
-  }
-
-  Container search() {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        shape: BoxShape.rectangle,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.only(left: 10, right: 8),
-        child: TextFormField(
-          decoration: InputDecoration(
-              icon: Icon(Icons.search),
-              hintText: "Search",
-              border: InputBorder.none),
-        ),
       ),
     );
   }
